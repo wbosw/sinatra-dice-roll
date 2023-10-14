@@ -7,7 +7,7 @@ BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
 
 
-base_URL =  "https://organic-space-guacamole-4j75gqgg574ph95j-4567.app.github.dev/dice/"
+base_URL =  "https://organic-space-guacamole-4j75gqgg574ph95j-4567.app.github.dev/dice_2.0/"
 
 get("/") do
   "Hello World"
@@ -17,7 +17,7 @@ get("/zebra") do
   "We must add a route for each path we want to support"
 end
 
-get("/dice") do
+get("/dice_2.0") do
 "<h1>Pick a dice game to play!</h1>
  <p><a href = '#{base_URL}2/6'>Roll 2 dice with 6 sides each</a></p>
  <p><a href = '#{base_URL}2/10'>Roll 2 dice with 10 sides each</a></p>
@@ -27,7 +27,7 @@ end
 
 
 
-get("/dice/2/6") do
+get("/dice_2.0/2/6") do
   first_die = rand(1..6)
   second_die = rand(1..6)
   sum = first_die + second_die
@@ -39,7 +39,7 @@ get("/dice/2/6") do
 end
 
 
-get("/dice/2/10") do
+get("/dice_2.0/2/10") do
   first_die = rand(1..6)
   second_die = rand(1..6)
   sum = first_die + second_die
@@ -50,7 +50,7 @@ get("/dice/2/10") do
   <p>#{outcome}</p>"
 end
 
-get ("/dice/1/20") do 
+get ("/dice_2.0/1/20") do 
   first_die = rand(1..20)
   outcome = "You rolled a #{first_die}"
 
@@ -58,7 +58,7 @@ get ("/dice/1/20") do
    <p>#{outcome}</p>"
 end
 
-get ("/dice/5/4") do
+get ("/dice_2.0/5/4") do
   first_die = rand(1..4)
   second_die = rand(1..4)
   third_die = rand(1..4)
