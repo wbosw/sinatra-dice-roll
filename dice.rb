@@ -1,4 +1,5 @@
 require "sinatra"
+base_URL =  "https://organic-space-guacamole-4j75gqgg574ph95j-4567.app.github.dev/dice/"
 
 get("/") do
   "Hello World"
@@ -7,6 +8,16 @@ end
 get("/zebra") do
   "We must add a route for each path we want to support"
 end
+
+get("/dice") do
+"<h1>Pick a dice game to play!</h1>
+ <p><a href = '#{base_URL}2/6'>Roll 2 dice with 6 sides each</a></p>
+ <p><a href = '#{base_URL}2/10'>Roll 2 dice with 10 sides each</a></p>
+ <p><a href = '#{base_URL}1/20'>Roll 1 die with 20 sides</a><p>
+ <p><a href = '#{base_URL}5/4'>Roll 5 dice with 4 sides each</a><p>"
+end
+
+
 
 get("/dice/2/6") do
   first_die = rand(1..6)
@@ -18,9 +29,7 @@ get("/dice/2/6") do
   "<h1>2d6</h1>
    <p>#{outcome}</p>"
 end
-#GET /dice/2/10 (simulate two 10-sided dice)
-#GET /dice/1/20 (simulate one 20-sided die)
-#GET /dice/5/4 (simulate five 4-sided dice)
+
 
 get("/dice/2/10") do
   first_die = rand(1..6)
@@ -55,4 +64,3 @@ get ("/dice/5/4") do
   "<h1>5d/4</h1>
    <p>#{outcome}</p>"
 end
-
