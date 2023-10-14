@@ -1,4 +1,12 @@
 require "sinatra"
+require "better_errors"
+require "binding_of_caller"
+use(BetterErrors::Middleware)
+BetterErrors.application_root = __dir__
+BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
+
+
+
 base_URL =  "https://organic-space-guacamole-4j75gqgg574ph95j-4567.app.github.dev/dice/"
 
 get("/") do
@@ -24,7 +32,7 @@ get("/dice/2/6") do
   second_die = rand(1..6)
   sum = first_die + second_die
 	
-  outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
+  outcome = "You rolled a #{firdst_die} and a #{second_die} for a total of #{sum}."
 	
   "<h1>2d6</h1>
    <p>#{outcome}</p>"
