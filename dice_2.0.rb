@@ -19,7 +19,7 @@ end
 
 get("/dice_2.0") do
 "<h1>Pick a dice game to play!</h1>
- <p><a href = \"alice_2.0/2/6\">Roll 2 dice with 6 sides each</a></p>
+ <p><a href = \"/2/6\">Roll 2 dice with 6 sides each</a></p>
  <p><a href = '#{base_URL}2/10'>Roll 2 dice with 10 sides each</a></p>
  <p><a href = '#{base_URL}1/20'>Roll 1 die with 20 sides</a><p>
  <p><a href = '#{base_URL}5/4'>Roll 5 dice with 4 sides each</a><p>"
